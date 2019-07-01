@@ -19,7 +19,7 @@ services:
       volumes:
           - ./db-data:/var/lib/mysql
       environment:
-          - MYSQL_ROOT_PASSWORD=sandeep123
+          - MYSQL_ROOT_PASSWORD=sandeep123 # use secrets instead
       restart: always
   wordpress:
       image: wordpress:4.7.1-php7.0-fpm
@@ -31,7 +31,7 @@ services:
           - WORDPRESS_DB_NAME=wpdb
           - WORDPRESS_TABLE_PREFIX=wp_
           - WORDPRESS_DB_HOST=mysql
-          - WORDPRESS_DB_PASSWORD=sandeep123
+          - WORDPRESS_DB_PASSWORD=sandeep123     # use secrets instead
       links:
           - mysql
       restart: always    
