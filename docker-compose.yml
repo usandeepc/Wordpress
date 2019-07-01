@@ -22,7 +22,7 @@ services:
           - MYSQL_ROOT_PASSWORD=sandeep123 # use secrets instead
       restart: always
   wordpress:
-      image: wordpress:4.7.1-php7.0-fpm
+      image: wordpress:5.2.2-php7.2-fpm
       ports:
           - '9000:9000'
       volumes:
